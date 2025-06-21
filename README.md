@@ -1,48 +1,64 @@
-# ☕ Café do Bairro
+# 📦 Projeto: Café do Bairro
 
-Aplicação web responsiva desenvolvida como parte do projeto de extensão **Trilhas Formativas para Aprendizagem Online**. O objetivo é oferecer uma vitrine digital para cafeterias locais, permitindo a divulgação de produtos de forma acessível, simples e eficiente.
-
-## 🚀 Tecnologias Utilizadas
-
-- [React](https://reactjs.org/) – biblioteca JavaScript para construção de interfaces;
-- [Tailwind CSS](https://tailwindcss.com/) – framework utilitário para estilização rápida e responsiva;
-- HTML5 e boas práticas de acessibilidade.
-
-## 📷 Captura de Tela
-
-![Interface Café do Bairro](https://images.unsplash.com/photo-1509042239860-f550ce710b93)
-
-## 🎯 Funcionalidades
-
-- Apresentação do nome e descrição da cafeteria;
-- Imagem ilustrativa da loja ou produto;
-- Botão de ação para iniciar pedido;
-- Menu organizado em categorias: Cafés, Bolos e Doces;
-- Layout responsivo para diferentes tamanhos de tela;
-- Código organizado e modular com foco em acessibilidade.
-
-## 🧱 Estrutura do Projeto
-
-```
-📁 cafe-do-bairro/
-├── index.html
-├── README.md
-├── package.json
-```
-
-## 📦 Como Executar o Projeto Localmente
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/usuario/cafe-do-bairro.git
-   ```
-
-2. Abra o `index.html` diretamente no navegador.
-
-## 📄 Licença
-
-Este projeto está licenciado sob os termos da [MIT License](LICENSE).
+Este projeto é parte da atividade prática de Desenvolvimento Web com HTML, CSS e frameworks, além de integração com modelagem de banco de dados e versionamento de código.
 
 ---
 
-**Desenvolvido por:** Alexandre – UFMS | Projeto de Extensão AMV.130421
+## ☕ Sobre o projeto
+
+**Café do Bairro** é uma aplicação web estática e responsiva desenvolvida com **HTML** e **Tailwind CSS**, simulando um sistema de pedidos para uma cafeteria. Além da interface, foi modelado um banco de dados com **duas tabelas relacionais** para armazenar informações sobre produtos e pedidos.
+
+---
+
+## 🚀 Funcionalidades implementadas
+
+- Página principal com descrição da cafeteria, imagem ilustrativa e botão de ação.
+- Cardápio dividido em categorias: Cafés, Bolos e Doces.
+- Interface responsiva com Tailwind CSS.
+- Modelagem de banco de dados com tabelas relacionadas:
+  - `Produtos`: armazena nome, preço, descrição e estoque.
+  - `Pedidos`: registra compras feitas pelos clientes, vinculadas aos produtos.
+- Script SQL incluído no repositório com estrutura e dados de exemplo.
+
+---
+
+## 🧰 Tecnologias e ferramentas
+
+- HTML5 semântico
+- Tailwind CSS para responsividade
+- SQL para modelagem de banco de dados
+- Git e GitHub para versionamento
+
+---
+
+## 🗃 Estrutura do banco de dados
+
+O script `database.sql` cria e popula duas tabelas:
+
+### Tabela `Produtos`
+
+| Campo     | Tipo        | Detalhes           |
+|-----------|-------------|--------------------|
+| id        | INT         | PK, auto_increment |
+| nome      | VARCHAR(100)| NOT NULL           |
+| descricao | TEXT        | -                  |
+| preco     | DECIMAL     | NOT NULL           |
+| estoque   | INT         | NOT NULL           |
+
+### Tabela `Pedidos`
+
+| Campo       | Tipo         | Detalhes                      |
+|-------------|--------------|-------------------------------|
+| id          | INT          | PK, auto_increment            |
+| produto_id  | INT          | FK (relacionado a Produtos)   |
+| quantidade  | INT          | NOT NULL                      |
+| data_pedido | DATE         | NOT NULL                      |
+| cliente     | VARCHAR(100) | NOT NULL                      |
+
+---
+
+## 📝 Como usar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/whoisxandy/AMV.130421.git

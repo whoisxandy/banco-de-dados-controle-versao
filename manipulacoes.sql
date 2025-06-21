@@ -1,22 +1,13 @@
 -- Atualizar preço de um produto
-UPDATE Produtos
-SET preco = 5.50
-WHERE nome = 'Café Espresso';
-
--- Atualizar estoque após um pedido
-UPDATE Produtos
-SET estoque = estoque - 2
-WHERE id = 1;
+UPDATE produtos SET preco = 5.50 WHERE id = 1;
 
 -- Remover um pedido
-DELETE FROM Pedidos
-WHERE id = 2;
+DELETE FROM pedidos WHERE id = 2;
 
--- Consultar todos os pedidos com nome do produto
-SELECT Pedidos.id, Produtos.nome AS produto, cliente, data_pedido, quantidade
-FROM Pedidos
-JOIN Produtos ON Pedidos.produto_id = Produtos.id;
+-- Consulta de pedidos com nome dos produtos
+SELECT pedidos.id, produtos.nome, pedidos.quantidade, pedidos.data_pedido
+FROM pedidos
+JOIN produtos ON pedidos.produto_id = produtos.id;
 
--- Consultar produtos com estoque abaixo de 10
-SELECT * FROM Produtos
-WHERE estoque < 10;
+-- Consulta de produtos com estoque maior que 10
+SELECT * FROM produtos WHERE estoque > 10;

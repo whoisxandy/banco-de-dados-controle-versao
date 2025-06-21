@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Café do Bairro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-brown-800 text-white text-center p-6 shadow-md">
+    <h1 class="text-3xl font-bold">Café do Bairro</h1>
+  </header>
+
+  <main class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <section class="mb-6 text-center">
+      <p class="text-lg text-gray-700">
+        Um cantinho acolhedor com cafés especiais, bolos caseiros e atendimento que aquece o coração.
+      </p>
+    </section>
+
+    <section class="flex justify-center mb-6">
+      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93" 
+           alt="Imagem de café" class="rounded-lg shadow-lg w-full max-w-md" />
+    </section>
+
+    <section class="text-center mb-10">
+      <a href="#menu" class="bg-yellow-600 text-white px-6 py-3 rounded-full hover:bg-yellow-700 transition">
+        Fazer Pedido
+      </a>
+    </section>
+
+    <section id="menu">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Nosso Cardápio</h2>
+      <div class="mb-6">
+        <h3 class="text-xl font-bold text-brown-800 mb-2">Cafés</h3>
+        <ul class="space-y-1 text-gray-700">
+          <li class="flex justify-between"><span>Espresso</span><span>R$ 5,00</span></li>
+          <li class="flex justify-between"><span>Cappuccino</span><span>R$ 8,00</span></li>
+          <li class="flex justify-between"><span>Latte</span><span>R$ 7,50</span></li>
+          <li class="flex justify-between"><span>Mocha</span><span>R$ 9,00</span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-bold text-brown-800 mb-2">Bolos</h3>
+        <ul class="space-y-1 text-gray-700">
+          <li class="flex justify-between"><span>Bolo de Cenoura com Chocolate</span><span>R$ 6,00</span></li>
+          <li class="flex justify-between"><span>Bolo de Fubá</span><span>R$ 5,50</span></li>
+          <li class="flex justify-between"><span>Bolo de Limão Siciliano</span><span>R$ 7,00</span></li>
+        </ul>
+      </div>
+
+      <div class="mb-6">
+        <h3 class="text-xl font-bold text-brown-800 mb-2">Doces</h3>
+        <ul class="space-y-1 text-gray-700">
+          <li class="flex justify-between"><span>Brownie</span><span>R$ 6,50</span></li>
+          <li class="flex justify-between"><span>Cookie Artesanal</span><span>R$ 4,00</span></li>
+          <li class="flex justify-between"><span>Torta de Maçã</span><span>R$ 7,50</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center mt-10 p-4 text-gray-600 text-sm">
+    © 2025 Café do Bairro. Todos os direitos reservados.
+  </footer>
+</body>
+</html>

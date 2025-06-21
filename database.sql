@@ -1,29 +1,26 @@
--- Criação da tabela Produtos
-CREATE TABLE Produtos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
-    descricao TEXT,
-    preco DECIMAL(8,2) NOT NULL,
-    estoque INT NOT NULL CHECK (estoque >= 0)
+-- Criação das tabelas
+CREATE TABLE produtos (
+  id INT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  preco DECIMAL(10, 2) NOT NULL,
+  estoque INT DEFAULT 0
 );
 
--- Criação da tabela Pedidos
-CREATE TABLE Pedidos (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    produto_id INT NOT NULL,
-    cliente VARCHAR(100) NOT NULL,
-    data_pedido DATE NOT NULL,
-    quantidade INT NOT NULL CHECK (quantidade > 0),
-    FOREIGN KEY (produto_id) REFERENCES Produtos(id)
+CREATE TABLE pedidos (
+  id INT PRIMARY KEY,
+  data_pedido DATE NOT NULL,
+  produto_id INT,
+  quantidade INT NOT NULL,
+  FOREIGN KEY (produto_id) REFERENCES produtos(id)
 );
 
--- Inserção de dados
-INSERT INTO Produtos (nome, descricao, preco, estoque) VALUES
-('Café Espresso', 'Café espresso tradicional', 5.00, 50),
-('Bolo de Cenoura', 'Bolo caseiro com cobertura de chocolate', 6.00, 20),
-('Cookie Artesanal', 'Cookie artesanal com gotas de chocolate', 4.00, 30);
+-- Inserções iniciais
+INSERT INTO produtos (id, nome, preco, estoque) VALUES
+(1, 'Café Espresso', 5.00, 50),
+(2, 'Cappuccino', 8.00, 30),
+(3, 'Brownie', 6.50, 20);
 
-INSERT INTO Pedidos (produto_id, cliente, data_pedido, quantidade) VALUES
-(1, 'João Silva', '2025-06-20', 2),
-(2, 'Maria Oliveira', '2025-06-21', 1),
-(3, 'Ana Pereira', '2025-06-21', 5);
+INSERT INTO pedidos (id, data_pedido, produto_id, quantidade) VALUES
+(1, '2025-06-20', 1, 2),
+(2, '2025-06-20', 3, 1),
+(3, '2025-06-21', 2, 3);

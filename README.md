@@ -27,6 +27,7 @@ Aplicação web responsiva desenvolvida como parte do projeto de extensão **Tri
 📁 cafe-do-bairro/
 ├── index.html
 ├── README.md
+├── package.json
 ```
 
 ## 📦 Como Executar o Projeto Localmente

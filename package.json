@@ -1,0 +1,13 @@
+{
+  "name": "cafe-do-bairro",
+  "version": "1.0.0",
+  "description": "Projeto web responsivo para uma cafeteria fictícia, usando HTML5 e TailwindCSS via CDN.",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Abra o index.html no navegador.'",
+    "build": "echo 'Nada para compilar: Tailwind via CDN.'"
+  },
+  "keywords": ["cafeteria", "html", "css", "tailwind", "responsivo", "site"],
+  "author": "Alexandre - UFMS",
+  "license": "MIT"
+}
